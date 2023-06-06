@@ -265,14 +265,15 @@
               Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
             */
 
+      //Questo mi restituisce una nodeList
       const all = document.querySelectorAll("body *")
       console.log(all)
 
-      const removeVocals = function (tag) {
+      const removeVowels = function (tag) {
         //Mi passo tutti i childnodes del tag
         tag.childNodes.forEach((tag) => {
           //Se il tag in question ha dei child, vado di ricorsività
-          if (tag.hasChildNodes()) removeVocals(tag)
+          if (tag.hasChildNodes()) removeVowels(tag)
           //Se non ha dei child, levo le vocali
           else
             tag.textContent = tag.textContent
@@ -285,11 +286,12 @@
       }
 
       const deleteVowels = function (tags) {
-        //Tutti i tag del body passano qua dentro
+        //Tutti i tag del body passano qua dentro (Sono in una nodeList)
         tags.forEach((tag) => {
-          removeVocals(tag)
+          removeVowels(tag)
         })
       }
+
       deleteVowels(all)
     </script>
   </body>
