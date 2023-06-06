@@ -277,11 +277,16 @@
           //Se non ha dei child, levo le vocali
           else
             tag.textContent = tag.textContent
-              .replace("a", "")
-              .replace("e", "")
-              .replace("i", "")
-              .replace("o", "")
-              .replace("u", "")
+              .replaceAll("a", "")
+              .replaceAll("e", "")
+              .replaceAll("i", "")
+              .replaceAll("o", "")
+              .replaceAll("u", "")
+              .replaceAll("A", "")
+              .replaceAll("E", "")
+              .replaceAll("I", "")
+              .replaceAll("O", "")
+              .replaceAll("U", "")
         })
       }
 
